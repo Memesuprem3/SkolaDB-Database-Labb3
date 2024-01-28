@@ -13,6 +13,7 @@ namespace SkolaDB_Database_Labb3
             VäljKlass Välj = new VäljKlass();
             AddPersonal addPersonal = new AddPersonal();
 
+
             
             while (true)
             {
