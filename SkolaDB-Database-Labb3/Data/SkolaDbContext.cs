@@ -123,7 +123,7 @@ public partial class SkolaDbContext : DbContext
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("[First Name");
+                .HasColumnName("First Name");
             entity.Property(e => e.KlassId).HasColumnName("KlassID");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)

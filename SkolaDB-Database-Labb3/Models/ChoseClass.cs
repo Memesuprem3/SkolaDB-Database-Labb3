@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SkolaDB_Database_Labb3.Models
 {
-    internal class VäljKlass
+    internal class ChoseClass
     {
 
-        public void Välj()
+        public static void Choose()
         {
             using (var context = new SkolaDbContext())
             {

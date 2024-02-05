@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SkolaDB_Database_Labb3.Models
 {
-    internal class AddPersonal
+    internal class AddEmployee
     {
 
-        public void LäggTillNyPersonal()
+        public static void AddNewEmplyoee()
         {
             Console.WriteLine("Ange för och efternamn:");
             string förnamn = Console.ReadLine();

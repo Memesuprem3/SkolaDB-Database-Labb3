@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace SkolaDB_Database_Labb3.Models
 {
-    internal class Sortering 
+
+    internal class SortStudents 
     {
-        public void Sort()
+        public static void Sort()
         {
             Console.WriteLine("Välj sortering: Ange '1' för förnamn, '2' för efternamn.");
             string sortChoice = Console.ReadLine();
