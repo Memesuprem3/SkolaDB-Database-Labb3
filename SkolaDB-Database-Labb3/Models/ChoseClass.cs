@@ -18,14 +18,14 @@ namespace SkolaDB_Database_Labb3.Models
                 {
                     
                     Console.WriteLine("\nTillgängliga klasser:");
-                    var klasser = context.Klassers.ToList();
+                    var klasser = context.Klassers.ToList(); // lista skapas 
                     foreach (var k in klasser)
                     {
-                        Console.WriteLine($"Klass ID: {k.KlassId}, Namn: {k.KlassN}");
+                        Console.WriteLine($"Klass ID: {k.KlassId}, Namn: {k.KlassN}"); // plockar fram ID för input
                     }
 
                     Console.WriteLine("Välj en klass genom att ange dess ID (eller ange '0' för att gå tillbaka):");
-                    int klassId = Convert.ToInt32(Console.ReadLine());
+                    int klassId = Convert.ToInt32(Console.ReadLine()); 
 
                     //Loop för att hänga kvar
                     if (klassId == 0)
@@ -37,7 +37,7 @@ namespace SkolaDB_Database_Labb3.Models
                     Console.Clear();
                     
                     var elever = context.Studenters
-                                        .Where(s => s.KlassId == klassId)
+                                        .Where(s => s.KlassId == klassId) // tar fram elever ifrån klass och ifrån ID?
                                         .ToList();
 
                     Console.WriteLine($"\nElever i klass {klassId}:");
