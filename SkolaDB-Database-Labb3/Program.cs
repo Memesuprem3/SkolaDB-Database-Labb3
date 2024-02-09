@@ -3,17 +3,29 @@ using SkolaDB_Database_Labb3.Models;
 
 using SkolaDbContext context = new SkolaDbContext();
 
+static void WriteCenteredLine(string text)
+{
+    int screenWidth = Console.WindowWidth;
+    int stringWidth = text.Length;
+    int spaces = (screenWidth / 2) + (stringWidth / 2);
+
+    Console.WriteLine(text.PadLeft(spaces));
+}
+
 while (true)
 {
-    Console.WriteLine("\nVälkommen till skolans administrationsprogram!");
-    Console.WriteLine("1. Visa och sortera elever");
-    Console.WriteLine("2. Visa elever i en specifik klass");
-    Console.WriteLine("3. Visa information om elever");
-    Console.WriteLine("4. lägg till ny personal");
-    Console.WriteLine("5. Visa alla lärare");
-    Console.WriteLine("6. Visa Aktiva kurser");
-    Console.WriteLine("7. Avsluta programmet");
-    Console.WriteLine("Välj ett alternativ (1-4):");
+
+    Console.Clear();
+    WriteCenteredLine("================== Välkommen till Skolans Administrationsprogram ==================");
+    WriteCenteredLine("1. Visa och sortera elever");
+    WriteCenteredLine("2. Visa elever i en specifik klass");
+    WriteCenteredLine("3. Visa information om elever");
+    WriteCenteredLine("4. Lägg till ny personal");
+    WriteCenteredLine("5. Visa alla lärare");
+    WriteCenteredLine("6. Visa aktiva kurser");
+    WriteCenteredLine("7. Avsluta programmet");
+    WriteCenteredLine("===================================================================================");
+    WriteCenteredLine("Välj ett alternativ (1-7): ");
 
     var val = Console.ReadLine();
 
